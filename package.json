@@ -1,0 +1,38 @@
+{
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@vitest/coverage-c8": "^0.33.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.7"
+  },
+  "bin": {
+    "mongodb-cloner": "./dist/bin/mongodb-cloner.js"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "dotenv": "^17.2.3",
+    "enquirer": "^2.4.1",
+    "mongodb": "^6.20.0"
+  },
+  "name": "mongodb-cloner-a-to-b",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --exclude \"dist/**\"",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iCode-Cat/MongoDB-Cloner-A-to-B.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iCode-Cat/MongoDB-Cloner-A-to-B/issues"
+  },
+  "homepage": "https://github.com/iCode-Cat/MongoDB-Cloner-A-to-B#readme"
+}
