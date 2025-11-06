@@ -32,9 +32,9 @@ You can run the tool directly with `npx` or install it globally.
 npx mongodb-cloner
 
 # Install globally
-yarn global add mongodb-cloner-a-to-b
+yarn global add mongodb-cloner
 # or
-npm install -g mongodb-cloner-a-to-b
+npm install -g mongodb-cloner
 
 # Run after global install
 mongodb-cloner
@@ -129,12 +129,10 @@ Key files:
 1. Update `package.json` version if needed.
 2. `npm run build`
 3. `npm test`
-4. `npm publish`
+4. `npm publish --access public`
 
 Once published, announce the release with:
 
 ```
-npx mongodb-cloner --skip-indexes
-```
 
-Copy databases with confidence 🎉
+```
