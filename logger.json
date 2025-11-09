@@ -1,0 +1,24 @@
+{
+    "service": "neo-hub",
+    "env": "dev",
+    "level": "DEBUG",
+    "transports": {
+      "console": { "enabled": true },
+      "papertrail": { 
+        "enabled": true, 
+        "host": "logs.collector.eu-01.cloud.solarwinds.com", 
+        "port": 443, 
+        "program": "neo-hub" 
+      },
+      "udpRelay": { 
+        "enabled": false, 
+        "host": "localhost", 
+        "port": 12345 
+      }
+    },
+    "sampling": {  "verbose": 1.0, "debug": 1.0, "info": 1.0 },
+    "redact": {
+      "queryParams": ["password", "token", "secret", "api_key", "auth_token", "access_key", "secret_key"],
+      "headers": ["authorization", "x-api-key", "x-apikeys"]
+    }
+  }

@@ -53,8 +53,6 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 .npmrc
-logger.json
-
 # Optional stylelint cache
 .stylelintcache
 
