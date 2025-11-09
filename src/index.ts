@@ -11,12 +11,19 @@ import {
   listDatabaseNamesFromClient,
 } from "./database/mongodb.js";
 import { cloneDatabases } from "./clone/runner.js";
+import { runXronoxMode } from "./xronox/index.js";
 
 type RunCliOptions = {
   skipIndexes?: boolean;
+  xronoxMode?: boolean;
 };
 
 export async function runCli(options: RunCliOptions = {}): Promise<void> {
+  if (options.xronoxMode) {
+    await runXronoxMode();
+    return;
+  }
+
   console.log("Welcome to MongoDB Cloner");
 
   const sourceUri = await promptMongoUri();

@@ -14,7 +14,10 @@
     "commander": "^14.0.2",
     "dotenv": "^17.2.3",
     "enquirer": "^2.4.1",
-    "mongodb": "^6.20.0"
+    "mongodb": "^6.20.0",
+    "@xronoces/xronox-core": "^2.3.0",
+    "@xronoces/xronox-router": "^1.2.1",
+    "@xronoces/xronox-storage-interface": "^2.0.2"
   },
   "name": "mongodb-cloner",
   "version": "1.0.0",

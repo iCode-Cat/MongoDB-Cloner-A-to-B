@@ -42,6 +42,42 @@ export async function promptDatabaseSelection(
   return selected;
 }
 
+export async function promptSingleDatabase(
+  databaseNames: string[]
+): Promise<string> {
+  if (databaseNames.length === 1) {
+    return databaseNames[0];
+  }
+
+  const response: any = await enquirer.prompt({
+    type: "select",
+    name: "database",
+    message: "Select database:",
+    choices: databaseNames,
+  });
+
+  return response.database as string;
+}
+
+export async function promptCollectionSelection(
+  collectionNames: string[]
+): Promise<string[]> {
+  const choices = ["[Select All]", ...collectionNames];
+
+  const response: any = await enquirer.prompt({
+    type: "multiselect",
+    name: "collections",
+    message: "Select collections to migrate (space = toggle, enter = confirm):",
+    choices,
+  });
+
+  const selected = response.collections as string[];
+  if (selected.includes("[Select All]")) {
+    return collectionNames;
+  }
+  return selected;
+}
+
 export async function promptDestinationMongoUri(): Promise<string> {
   const response: any = await enquirer.prompt({
     type: "input",

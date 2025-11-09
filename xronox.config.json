@@ -1,0 +1,10 @@
+{
+    "database": { "uri": "ENV.MONGO_URI", "dbName": "ENV.XRONOX_DB||xronox_system" },
+    "storage": {
+      "endpoint": "ENV.SPACE_ENDPOINT",
+      "region": "ENV.SPACE_REGION||us-east-1",
+      "bucket": "ENV.SPACE_BUCKET",
+      "accessKey": "ENV.SPACE_ACCESS_KEY",
+      "secretKey": "ENV.SPACE_SECRET_KEY"
+    }
+  }

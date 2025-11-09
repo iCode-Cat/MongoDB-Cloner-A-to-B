@@ -7,7 +7,8 @@ import { runCli } from "../src/index.js";
 async function main() {
   const args = process.argv.slice(2);
   const skipIndexes = args.includes("--skip-indexes");
-  await runCli({ skipIndexes });
+  const xronoxMode = args.includes("--xronox");
+  await runCli({ skipIndexes, xronoxMode });
 }
 
 main().catch((err) => {

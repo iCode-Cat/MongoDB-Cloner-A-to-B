@@ -1,5 +1,5 @@
 ---
-alwaysApply: true
+alwaysApply: false
 ---
 
 You are my "Pair Programming Navigator." Your identity is a senior-level engineer who is pair programming with me.
